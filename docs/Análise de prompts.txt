@@ -1,0 +1,59 @@
+Modelo: openchat
+Objetivo: Sumarização
+
+Prompt 1: ollama run openchat --verbose "Idioma: Português. Resuma esse arquivo: $(cat ./data/vaga_emprego.txt)"
+Resposta: 
+
+Você está procurando por uma oportunidade de trabalho como DBA (Database Administrator) no setor de TI. A empresa Stefanini oferece as seguintes informações sobre a vaga:
+
+Título da vaga: Database Administrator
+Local: Remoto, com possibilidade de presença na sede em São Paulo/SP
+Tipo de contrato: Permanente
+Contratação: Imediatamente
+Remuneração: A combinar
+
+Requisitos:
+a) Conhecimentos: Gerência de Banco de Dados Relacionais como Oracle, Microsoft SQL Server e/ou IBM DB2;
+b) Conhecimentos: Redes, Sistemas Operacionais Windows e Linux, Shell Script e PL/SQL;
+c) Conhecimentos: Conceitos básicos de Arquitetura de TI, Arquitetura de Solução de Banco de Dados e Infraestrutura de TI em Geral;
+d) Certificações requeridas: Oracle OCP (Oracle Certified Professional) A- Oracle Database 12c ou superior;
+e) Conhecimentos: MySQL, PostgreSQL e outras soluções de banco de dados;
+f) Conhecimentos: Plataforma de dados em nuvem Azure, AWS, GCP e OCI;
+g) Conhecimentos: Computação e plataforma de dados em Nuvem Azure, AWS, GCP e OCI;
+h) Conhecimentos: Shell Script e PL/SQL;
+i) Conhecimentos: Sistemas Operacionais Windows e Linux;
+j) Conhecimentos: SQL Server 2008 ou Superior;
+k) Desejavel: Certificações de Fundamentos de Nuvem: Oracle Cloud Infrastructure Foundations;
+l) Desejavel: Noções de metodologias de gerenciamento de serviços de TI, como: ISO 20K, MOF;
+m) Idiomas: Bons conhecimentos em língua inglesa.
+
+INFORMAÇÕES ADICIONAIS:
+O que te oferecemos:
+🍛 Vale Alimentação ou Vale Refeição;
+👨🏼‍🎓 Desconto em cursos, universidades e instituições de idiomas;
+📚 Academia Stefanini - plataforma com cursos online, gratuitos, atualizados e com certificado;
+🗣 Mentoring;
+🏫 Auxílio Creche;
+💉 Clube de vantagens para consultas e exames;
+🏥 Assistência Médica;
+🦷Assistência Odontológica;
+💰 Clube de vantagens e descontos nos melhores estabelecimentos;
+👂🏾 Atendimento psicológico online ao colaborador e seus dependentes;
+🛫 Clube de viagens;
+🐶 Convênio para Pet;
+e muito mais...
+WE ARE STEFANINI:
+Somos uma multinacional brasileira com mais de 30 anos de atuação no ecossistema de inovação. Entregamos soluções eficazes que auxiliam os nossos clientes em suas jornadas digitais, sempre aplicando o nosso propósito de tornar a
+tecnologia um agente de mudança para um mundo melhor.
+Você quer transformar o futuro? A gente também. 🚀
+
+total duration:       16.512671358s
+load duration:        192.133µs
+prompt eval count:    1133 token(s)
+prompt eval duration: 2.154333s
+prompt eval rate:     525.92 tokens/s
+eval count:           859 token(s)
+eval duration:        14.357685s
+eval rate:            59.83 tokens/s
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
