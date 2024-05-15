@@ -145,7 +145,7 @@ export class AppComponent {
 
     if (response.ok){
       const data = await response.json();
-      this.typetext(messageDiv, data.response);
+      this.typetext(messageDiv, data.answer);
     }else {
       const err = await response.text();
       if (messageDiv != null){
