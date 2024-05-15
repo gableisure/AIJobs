@@ -5,6 +5,7 @@ import logging
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 from src.utils.helpers import *
 
@@ -29,7 +30,6 @@ class SearchPageGupy:
         # Insere o texto da vaga "Engenheiro de Dados" na barra de pesquisa
         input_search_job = WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.XPATH, '//input[@aria-label="Buscar vaga"]')))
         input_search_job.send_keys('Engenheiro de Dados')
-        
 
     def click_search_button(self):
         WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="undefined-button"]'))).click()
@@ -55,7 +55,7 @@ class SearchPageGupy:
             self.browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
             # Aguarda até que novos elementos sejam carregados
-            WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'sc-1cba52f7-1'))) 
+            WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'sc-1cba52f7-1')))
 
             sleep(2)
 
@@ -95,6 +95,9 @@ class SearchPageGupy:
                 type: description.
         """
         self.browser.get(link_job)
+
+        WebDriverWait(self.browser, 30).until(EC.presence_of_element_located((By.XPATH, "//main[@id='main']")))
         main = self.browser.find_element(By.XPATH, "//main[@id='main']")
+        
         return main.text
 
