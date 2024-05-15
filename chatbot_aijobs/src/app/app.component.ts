@@ -16,10 +16,10 @@ export class AppComponent {
   container:any;
   isVisible:boolean = true;
   listFAQ = [
-    { "text": "O que é o DFT?", "score": 15 },
-    { "text": "Qual o site de acesso ao sistema?", "score": 10 },
-    { "text": "Qual o site da unb?", "score": 7 },
-    { "text": "Qual o site do acre?", "score": 2 }
+    { "text": "Qual a quantidade de vagas disponíveis hoje?", "score": 15 },
+    { "text": "Quais são as vagas de regime home office?", "score": 10 },
+    { "text": "Quais são as vagas que possuem Gympass?", "score": 7 },
+    { "text": "Qual a vaga que oferece os melhores benefícios?", "score": 2 }
   ]
 
   @Output() updatePromptEvent = new EventEmitter<string>();
