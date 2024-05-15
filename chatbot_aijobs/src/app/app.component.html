@@ -1,0 +1,26 @@
+<div id="app">
+  <div id="container" #container></div>
+  <div class="welcome" *ngIf="isVisible">
+    <div id="welcome-text">
+      <img src="../assets/chatbot_icon.png" />
+      <p>Olá, eu sou o AI Jobs, seu assistente virtual!</p>
+      <p>Como posso ajudar?</p>
+    </div>
+    <div id="welcome-faq">
+      <ul class="grid grid-template-columns">
+        <li *ngFor="let pergunta of listFAQ" (click)="submitFAQ(pergunta.text)">
+          <span>{{pergunta.text}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <form #form>
+    <textarea id="txarea" name="prompt" rows="1" cols="1" placeholder="Faça uma pergunta..."></textarea>
+    <button type="submit">
+      <span class="material-symbols-outlined send">
+        send
+      </span>
+    </button>
+  </form>
+  <span id="text-bottom">O Chatbot pode cometer erros.</span>
+</div>

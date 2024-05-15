@@ -62,17 +62,24 @@ class RunScraping():
         
         links = self.search_page.get_links_jobs()
 
-        """ logging.info('Quantidade de vagas encontradas:', len(links)) """
-
         objs = []
 
 
+        """
+            TODO: Tratar a exceção para links corrompidos.
+        """
         logging.info('Extraindo dados...')
         for link in links:
-            objs.append({
-                'text_job': self.search_page.extract_text_job_page(link),
-                'extraction_date': self.helpers.get_date_now()
-            })
+            logging.info(f'Extraindo dados de {link}')
+
+            try:
+                objs.append({
+                    'text_job': self.search_page.extract_text_job_page(link),
+                    'extraction_date': self.helpers.get_date_now()
+                })
+            except Exception as e:
+                print(e)
+                continue
         
         logging.info('Inserindo no Mongo...')
         self.mongodb.insert_data(collection="aijobs", data=objs)
