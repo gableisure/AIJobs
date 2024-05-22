@@ -14,7 +14,7 @@ class MongoDB:
         self.client = MongoClient(config.host, config.port)
         self.db = self.client[config.db_name]
 
-    def insert_data(self, collection: str, data: dict) -> dict:
+    def insert_data(self, collection: str, data: dict) -> None:
         """
             Insere um dado no banco de dados.
 
@@ -25,5 +25,17 @@ class MongoDB:
             Returns:
                 dict: Dicionário contendo os dados a serem inseridos no banco de dados.
         """
-        collection = self.db[collection]
-        collection.insert_many(data)
+        collection = self.db[collection] # Seleciona a collection
+        collection.insert_many(data) # Insere os dados
+
+    def delete_all_documents(self, collection: str) -> None:
+        """
+            Deleta todos os documentos de uma colletion.
+
+            Args:
+                collection: Nome da colletion.
+
+            Returns:
+                None
+        """
+        self.db[collection].delete_many({}) # Deleta todos os documentos existentes antes de inserir os novos
